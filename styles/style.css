@@ -20,8 +20,8 @@ header .logo a {
 }
 
 .preebook-container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-bottom: 60px;
 }
 .preebook-container .start-journey {
@@ -47,6 +47,10 @@ header .logo a {
   color: #fff;
   border: 0;
   font-size: 14px;
+  transition: transform 1s ease-out;
+}
+#preebook-button:hover {
+  transform: skew(20deg) translate(20px);
 }
 .preebook-container .main-camera img {
   position: absolute;
@@ -193,15 +197,32 @@ footer .footer-icons {
   }
   .container {
     width: 100%;
+    margin: auto;
     margin-bottom: 50px;
   }
-  .collection-container {
-    margin-right: 10%;
+
+  .preebook-container,
+  .collection-container,
+  .influencer-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
+}
+
+/* for ipad */
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  header {
+    width: 100%;
+    background-color: honeydew;
+  }
+  .container {
+    width: 100%;
+  }
+
   .preebook-container,
   .collection-container,
   .influencer-container {
     grid-template-columns: repeat(1, 1fr);
-    flex-direction: column;
   }
 }
