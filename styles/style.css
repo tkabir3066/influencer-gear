@@ -9,6 +9,8 @@ body {
 
 /* header part */
 header {
+  width: 100%;
+  background-color: blanchedalmond;
   margin-bottom: 70px;
 }
 header .logo a {
